@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<ArrayOfRoom xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Room>
+    <roomnr>0</roomnr>
+    <availability>Free</availability>
+	<bookedby>Binita Nayak</bookedby>
+	<price>50</price>
+	<disability>Yes</disability>
+	<specialities>Balcony</specialities>
+	<smoke>Yes</smoke>
+	<housekeeping>Clean</housekeeping>
+	<furniture>1 Bed,1 Cupboard,1 Study Table</furniture>
+  </Room>
+  <Room>
+     <roomnr>1</roomnr>
+    <availability>Occupied</availability>
+	<bookedby>Asish Mishra</bookedby>
+	<price>60</price>
+	<disability>No</disability>
+	<specialities>River-Side</specialities>
+	<smoke>No</smoke>
+	<furniture>1 Bed,1 Cupboard,1 Study Table</furniture>
+    <housekeeping>Clean</housekeeping>
+  </Room>
+  
+ 
+</ArrayOfRoom>
