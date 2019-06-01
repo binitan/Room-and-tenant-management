@@ -29,5 +29,23 @@ namespace WpfApp_RoomManagement.Classes
                 throw;
             }
         }
+
+        internal static void WriteXml<T>(T data, string fileName)
+        {
+            try
+            {
+                XmlSerializer serializer = new XmlSerializer(typeof(T));
+                FileStream stream;
+                //stream = new FileStream(fileName, FileMode.Append,FileAccess.Write);
+                stream = new FileStream(fileName, FileMode.Create);
+                serializer.Serialize(stream, data);
+                stream.Close();
+            }
+            catch (Exception X)
+            {
+                Console.WriteLine(X);
+                throw;
+            }
+        }
     }
 }

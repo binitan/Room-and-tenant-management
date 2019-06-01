@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<ArrayOfTenant xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Tenant>
+    <firstname>Binita</firstname>
+    <lastname>Nayak</lastname>
+    <identitynr>12345</identitynr>
+    <dob>01/11/1993</dob>
+    <email>nayakbinita@gmail.com</email>
+  </Tenant>
+</ArrayOfTenant>

@@ -8,8 +8,8 @@ namespace WpfApp_RoomManagement.Classes
 {
     public class Room
     {
-        public int roomnr { get;set; }
-        public string availability { get;set; }
+        public int roomnr { get; set; }
+        public string availability { get; set; }
         public string bookedby { get; set; }
         public int price { get; set; }
         public string disability { get; set; }
@@ -17,6 +17,18 @@ namespace WpfApp_RoomManagement.Classes
         public string smoke { get; set; }
         public string furniture { get; set; }
         public string housekeeping { get; set; }
-        
+        //public string imagePath
+        //{
+        //    get
+        //    {
+        //        if (specialities.Equals("Balcony"))
+        //            imagePath = "Images\room1.jpg";
+        //        return this.imagePath;
+        //    }
+        //    set
+        //    {
+                
+        //    }
+        //}
     }
 }

@@ -17,27 +17,23 @@
             <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Booking Details" VerticalAlignment="Top"/>
             <StackPanel VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0,1,33,0" Orientation="Horizontal" Width="214">
                 <TextBlock Width="83" HorizontalAlignment="Left" Margin="0,1,0,0" TextWrapping="Wrap" Text="First Name"  VerticalAlignment="Top"/>
-                <TextBox  Height="23" TextWrapping="Wrap"  Width="120"/>
+                <TextBox Name="Tbx_fname" Height="23" TextWrapping="Wrap" Text="{Binding firstname}" TextChanged="Tenant_TextChanged" Width="120"/>
             </StackPanel>
             <StackPanel VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0,1,33,0" Orientation="Horizontal" Width="214">
                 <TextBlock Width="83" HorizontalAlignment="Left" Margin="0,1,0,0" TextWrapping="Wrap" Text="Last Name"  VerticalAlignment="Top"/>
-                <TextBox HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                <TextBox Name="Tbx_lname" Text="{Binding lastname}" TextChanged="Tenant_TextChanged" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
             </StackPanel>
             <StackPanel VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0,1,33,0" Orientation="Horizontal" Width="214">
                 <TextBlock Width="83" HorizontalAlignment="Left" Margin="0,1,0,0" TextWrapping="Wrap" Text="Identity Nr"  VerticalAlignment="Top"/>
-                <TextBox HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                <TextBox Name="Tbx_inr" Text="{Binding identitynr}" TextChanged="Tenant_TextChanged"  HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
             </StackPanel>
             <StackPanel VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0,1,33,0" Orientation="Horizontal" Width="214">
                 <TextBlock Width="83" HorizontalAlignment="Left" Margin="0,1,0,0" TextWrapping="Wrap" Text="DOB"  VerticalAlignment="Top"/>
-                <TextBox HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                <TextBox Name="Tbx_dob" Text="{Binding dob}" TextChanged="Tenant_TextChanged" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
             </StackPanel>
             <StackPanel VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0,1,33,0" Orientation="Horizontal" Width="214">
                 <TextBlock Width="83" HorizontalAlignment="Left" Margin="0,1,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Text="Email"/>
-                <TextBox HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-            </StackPanel>
-            <StackPanel VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0,1,0,0" Orientation="Horizontal" Width="214">
-                <TextBlock Width="83" HorizontalAlignment="Left" Margin="0,1,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Text="Phone"/>
-                <TextBox HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                <TextBox  Name="Tbx_email" Text="{Binding email}" TextChanged="Tenant_TextChanged" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
             </StackPanel>
             <StackPanel VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0,1,0,0" Orientation="Horizontal" Width="214">
                 <TextBlock Width="83" HorizontalAlignment="Left" Margin="0,1,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Text="Booking From"/>
@@ -49,7 +45,7 @@
             </StackPanel>
         </StackPanel>
         <StackPanel VerticalAlignment="Bottom" Margin="22,0,10,10" FlowDirection="RightToLeft" Orientation="Horizontal" Grid.Row="1" Height="22" Grid.Column="2">
-            <Button Content="Submit" Click="Button_Click_Submit" HorizontalAlignment="Left" VerticalAlignment="Top"  Margin="5,0" Width="59"/>
+            <Button Content="Submit" Click="Button_Click_Submit" HorizontalAlignment="Left"  Margin="5,0,5,2" Width="59"/>
         </StackPanel>
     </Grid>
 </Window>

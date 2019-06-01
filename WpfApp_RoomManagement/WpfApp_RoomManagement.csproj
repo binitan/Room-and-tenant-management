@@ -58,11 +58,8 @@
     <Compile Include="BookRoom.xaml.cs">
       <DependentUpon>BookRoom.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Classes\HouseKeeping.cs" />
     <Compile Include="Classes\MyStorage.cs" />
-    <Compile Include="Classes\Price.cs" />
     <Compile Include="Classes\Room.cs" />
-    <Compile Include="Classes\RoomAvailability.cs" />
     <Page Include="BookRoom.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -75,6 +72,7 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Classes\Tenant.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>

@@ -8,6 +8,8 @@
          Closing="Window_Closing" 
         Loaded="Window_Loaded"
         Title="Rooms and Tenants Management" Height="600" Width="550" Background="#FFAAD9F0">
+
+
     <TabControl Margin="0,50,0,0" Background="#FFC1FDB8">
         <TabItem Header="Rooms">
             <TabItem.Background>
@@ -31,7 +33,6 @@
                     <!--<RowDefinition Height="83*"/>
             <RowDefinition Height="486*"/>-->
                 </Grid.RowDefinitions>
-
 
                 <Menu Margin="0,0,0,0" Grid.Row="1" Background="#FFEEE7A1">
                     <StackPanel HorizontalAlignment="Left" Height="470" VerticalAlignment="Top" Width="88" Orientation="Vertical">
@@ -59,10 +60,14 @@
                         <Button Margin="0,70,0,0" Content="Go" Click="Button_Click_Go"/>
 
                     </StackPanel>
-                   
+
                 </Menu>
                 <StackPanel DataContext="{Binding ElementName=Lbx_rooms, Path=SelectedItem}" Grid.Column="2" Margin="10,11,0,40" Orientation="Vertical" Grid.Row="1">
-                    <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Room Number :" VerticalAlignment="Top"/>
+                    <!--<TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Room Number :" VerticalAlignment="Top"/>-->
+                    <TextBlock  HorizontalAlignment="Left" TextWrapping="Wrap" Text="" VerticalAlignment="Top">
+                <Run Text="Room Number" Foreground="Black" FontWeight="Bold"/>
+                <Run Text="{Binding roomnr}" Foreground="Black" FontWeight="Bold"/>
+                    </TextBlock>
                     <StackPanel VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0,1,33,0" Orientation="Horizontal" Width="214">
                         <TextBlock Width="83" HorizontalAlignment="Left" Margin="0,1,0,0" TextWrapping="Wrap" Text="Availability"  VerticalAlignment="Top"/>
                         <TextBox  Height="23" TextWrapping="Wrap" Text="{Binding availability}" Width="120"/>
@@ -91,6 +96,7 @@
                         <TextBlock Width="83" HorizontalAlignment="Left" Margin="0,1,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Text="Furniture"/>
                         <TextBox Text="{Binding furniture}" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
                     </StackPanel>
+                    <!--<Image Source="{Binding imagePath}" Height="100"/>-->
                 </StackPanel>
                 <StackPanel VerticalAlignment="Bottom" Margin="22,0,10,10" FlowDirection="RightToLeft" Orientation="Horizontal" Grid.Row="1" Height="22" Grid.Column="2">
                     <Button Content="Book" Click="Button_Click_Book" HorizontalAlignment="Left" VerticalAlignment="Top"  Margin="5,0" Width="59"/>
@@ -110,8 +116,70 @@
             </Grid>
         </TabItem>
         <TabItem Header="Tenants" Margin="-2,-2,-2,0">
+            <Grid Height="490" Width="534">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="172*"/>
+                    <ColumnDefinition Width="257*"/>
+                    <!--<ColumnDefinition Width="99*"/>
+            <ColumnDefinition Width="175*"/>
+            <ColumnDefinition Width="318*"/>-->
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition/>
+                    <!--<RowDefinition Height="83*"/>
+            <RowDefinition Height="486*"/>-->
+                </Grid.RowDefinitions>
 
+                <Menu Margin="0,0,0,0" Grid.Row="1" Background="#FFEEE7A1"/>
+                <StackPanel DataContext="{Binding Path=SelectedItem, ElementName=Lbx_tenants}" Grid.Column="2" Margin="10,11,0,40" Orientation="Vertical" Grid.Row="1">
+                    <TextBlock  HorizontalAlignment="Left" TextWrapping="Wrap" Text="" VerticalAlignment="Top">
+                <Run Text="{Binding firstname}" Foreground="BlueViolet" FontWeight="Bold"/>
+                <Run Text="{Binding lastname}" Foreground="Olive" FontWeight="Bold"/>
+                    </TextBlock>
+                    <StackPanel VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0,1,33,0" Orientation="Horizontal" Width="214">
+                        <TextBlock Width="83" HorizontalAlignment="Left" Margin="0,1,0,0" TextWrapping="Wrap" Text="First Name"  VerticalAlignment="Top"/>
+                        <TextBox  Height="23" TextWrapping="Wrap" Text="{Binding firstname}" Width="120" TextChanged="Tenant_Updated"/>
+                    </StackPanel>
+                    <StackPanel VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0,1,33,0" Orientation="Horizontal" Width="214">
+                        <TextBlock Width="83" HorizontalAlignment="Left" Margin="0,1,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Text="Last Name"/>
+                        <TextBox TextChanged="Tenant_Updated" HorizontalAlignment="Left" Text="{Binding lastname}" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                    </StackPanel>
+                    <StackPanel VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0,1,33,0" Orientation="Horizontal" Width="214">
+                        <TextBlock Width="83" HorizontalAlignment="Left" Margin="0,1,0,0" TextWrapping="Wrap" Text="Identity Nuber"  VerticalAlignment="Top"/>
+                        <TextBox TextChanged="Tenant_Updated" Text="{Binding identitynr}" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                    </StackPanel>
+                    <StackPanel VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0,1,33,0" Orientation="Horizontal" Width="214">
+                        <TextBlock Width="83" HorizontalAlignment="Left" Margin="0,1,0,0" TextWrapping="Wrap" Text="DOB"  VerticalAlignment="Top"/>
+                        <TextBox TextChanged="Tenant_Updated" Text="{Binding dob}" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                    </StackPanel>
+                    <StackPanel VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0,1,33,0" Orientation="Horizontal" Width="214">
+                        <TextBlock  Width="83" HorizontalAlignment="Left" Margin="0,1,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Text="Email"/>
+                        <TextBox TextChanged="Tenant_Updated" Text="{Binding email}"  HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                    </StackPanel>
+                </StackPanel>
+                <!--<DataGrid Name="Grd_tt" Grid.Column="1" HorizontalAlignment="Left" Height="149" Margin="10,11,0,0" Grid.Row="1" VerticalAlignment="Top" Width="194"/>-->
+
+                <ListBox x:Name="Lbx_tenants" Grid.Column="1" HorizontalAlignment="Left" Margin="10,11,0,0" Grid.Row="1" VerticalAlignment="Top" Width="194" >
+                    <ListBox.ItemTemplate>
+                        <DataTemplate>
+                            <TextBlock><Run Text="{Binding firstname}"/><Run Text=" "/><Run Text="{Binding lastname}" FontWeight="Bold"/></TextBlock>
+                        </DataTemplate>
+                    </ListBox.ItemTemplate>
+                </ListBox>
+            </Grid>
 
         </TabItem>
+        <TabItem Header="Bookings" Margin="-2,-2,-2,0">
+            <Grid Height="490" Width="534">
+                <Calendar x:Name="bookingcalender" Margin="218,0,101,301" SelectionMode="MultipleRange" SelectedDatesChanged="Bookingcalender_SelectedDatesChanged"/>
+                <ListBox x:Name="Lbx_booking" HorizontalAlignment="Left"  Margin="325,230,0,0" VerticalAlignment="Top" Width="100"/>
+                <!--<TextBox HorizontalAlignment="Left" Height="24" Margin="264,220,0,0" TextWrapping="Wrap" x:Name="testdate" VerticalAlignment="Top" Width="120"/>-->
+
+            </Grid>
+        </TabItem>
+
+
     </TabControl>
 </Window>

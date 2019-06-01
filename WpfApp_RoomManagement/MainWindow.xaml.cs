@@ -23,6 +23,8 @@ namespace WpfApp_RoomManagement
     public partial class MainWindow : Window
     {
         ObservableCollection<Room> rooms;
+        public static ObservableCollection<Tenant> tt = new ObservableCollection<Tenant>();
+        private bool changed;
         string filter = "";
         string choice1;
         string choice2;
@@ -30,9 +32,11 @@ namespace WpfApp_RoomManagement
         string choice4;
         string choice5;
         string choice6;
+
         public MainWindow()
         {
             InitializeComponent();
+            
         }
 
         private void Tbx_filter_TextChanged(object sender, TextChangedEventArgs e)
@@ -52,10 +56,13 @@ namespace WpfApp_RoomManagement
 
         private void Button_Click_Book(object sender, RoutedEventArgs e)
         {
+
             var win = new BookRoom();
             win.Owner = this;
             win.Show();
             Visibility = Visibility.Hidden;
+
+           
         }
 
         private void Button_Click_Checkout(object sender, RoutedEventArgs e)
@@ -63,11 +70,7 @@ namespace WpfApp_RoomManagement
 
         }
 
-        private void Button_Click_Submit(object sender, RoutedEventArgs e)
-        {
-
-        }
-
+       
         private void Button_Click_Update(object sender, RoutedEventArgs e)
         {
 
@@ -75,13 +78,18 @@ namespace WpfApp_RoomManagement
 
         private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
         {
-
+            if (changed)
+                MyStorage.WriteXml<ObservableCollection<Tenant>>(tt, "TenantData.xml");
         }
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
             rooms = MyStorage.ReadXml<ObservableCollection<Room>>("RoomData.xml");
             Lbx_rooms.ItemsSource = rooms;
+
+            tt= MyStorage.ReadXml<ObservableCollection<Tenant>>("TenantData.xml");
+            Lbx_tenants.ItemsSource = tt;
+
         }
         private void ComboBox_roomavailability(object sender, RoutedEventArgs e)
         {
@@ -184,6 +192,18 @@ namespace WpfApp_RoomManagement
           && s.specialities.Equals(choice5) && s.smoke.Equals(choice6))
                           select s;
             Lbx_rooms.ItemsSource = results;
+        }
+
+        
+
+        private void Tenant_Updated(object sender, TextChangedEventArgs e)
+        {
+            changed = true;
+        }
+
+        private void Bookingcalender_SelectedDatesChanged(object sender, SelectionChangedEventArgs e)
+        {
+            Lbx_booking.ItemsSource = bookingcalender.SelectedDates;
         }
     }
 }
