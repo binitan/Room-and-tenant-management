@@ -4,7 +4,21 @@
     <firstname>Binita</firstname>
     <lastname>Nayak</lastname>
     <identitynr>12345</identitynr>
-    <dob>01/11/1993</dob>
+    <dob>01/11/1992</dob>
     <email>nayakbinita@gmail.com</email>
+  </Tenant>
+  <Tenant>
+    <firstname>Andrew</firstname>
+    <lastname>Gelder</lastname>
+    <identitynr>12345</identitynr>
+    <dob>01/12/1991</dob>
+    <email>gelder13@gmail.com</email>
+  </Tenant>
+  <Tenant>
+    <firstname>Anglita</firstname>
+    <lastname>Alvares</lastname>
+    <identitynr>565671</identitynr>
+    <dob>07/12/1993</dob>
+    <email>alvares.anglita@gmail.com</email>
   </Tenant>
 </ArrayOfTenant>

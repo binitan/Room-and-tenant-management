@@ -9,8 +9,6 @@ namespace WpfApp_RoomManagement.Classes
     public class Room
     {
         public int roomnr { get; set; }
-        public string availability { get; set; }
-        public string bookedby { get; set; }
         public int price { get; set; }
         public string disability { get; set; }
         public string specialities { get; set; }

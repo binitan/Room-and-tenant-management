@@ -58,6 +58,7 @@
     <Compile Include="BookRoom.xaml.cs">
       <DependentUpon>BookRoom.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Classes\Bookings.cs" />
     <Compile Include="Classes\MyStorage.cs" />
     <Compile Include="Classes\Room.cs" />
     <Page Include="BookRoom.xaml">

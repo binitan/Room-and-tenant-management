@@ -24,6 +24,7 @@ namespace WpfApp_RoomManagement
     {
         ObservableCollection<Room> rooms;
         public static ObservableCollection<Tenant> tt = new ObservableCollection<Tenant>();
+        public static ObservableCollection<Bookings> bookings = new ObservableCollection<Bookings>();
         private bool changed;
         string filter = "";
         string choice1;
@@ -57,7 +58,7 @@ namespace WpfApp_RoomManagement
         private void Button_Click_Book(object sender, RoutedEventArgs e)
         {
 
-            var win = new BookRoom();
+            var win = new BookRoom((Room)Lbx_rooms.SelectedItem);
             win.Owner = this;
             win.Show();
             Visibility = Visibility.Hidden;
@@ -65,21 +66,11 @@ namespace WpfApp_RoomManagement
            
         }
 
-        private void Button_Click_Checkout(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-       
-        private void Button_Click_Update(object sender, RoutedEventArgs e)
-        {
-
-        }
-
         private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
         {
             if (changed)
                 MyStorage.WriteXml<ObservableCollection<Tenant>>(tt, "TenantData.xml");
+            MyStorage.WriteXml<ObservableCollection<Bookings>>(bookings, "BookingData.xml");
         }
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
@@ -89,6 +80,9 @@ namespace WpfApp_RoomManagement
 
             tt= MyStorage.ReadXml<ObservableCollection<Tenant>>("TenantData.xml");
             Lbx_tenants.ItemsSource = tt;
+
+            bookings=MyStorage.ReadXml<ObservableCollection<Bookings>>("BookingData.xml");
+            Grd_book.ItemsSource = bookings;
 
         }
         private void ComboBox_roomavailability(object sender, RoutedEventArgs e)
@@ -186,12 +180,12 @@ namespace WpfApp_RoomManagement
         }
         private void Button_Click_Go(object sender, RoutedEventArgs e)
         {
-            var results = from s in rooms
-                          where (s.availability.Equals(choice1) && s.price.ToString().Equals(choice2)
-          && s.housekeeping.Equals(choice3) && s.disability.Equals(choice4)
-          && s.specialities.Equals(choice5) && s.smoke.Equals(choice6))
-                          select s;
-            Lbx_rooms.ItemsSource = results;
+          //  var results = from s in rooms
+          //                where (s.availability.Equals(choice1) && s.price.ToString().Equals(choice2)
+          //&& s.housekeeping.Equals(choice3) && s.disability.Equals(choice4)
+          //&& s.specialities.Equals(choice5) && s.smoke.Equals(choice6))
+          //                select s;
+            //Lbx_rooms.ItemsSource = results;
         }
 
         
@@ -203,7 +197,7 @@ namespace WpfApp_RoomManagement
 
         private void Bookingcalender_SelectedDatesChanged(object sender, SelectionChangedEventArgs e)
         {
-            Lbx_booking.ItemsSource = bookingcalender.SelectedDates;
+            //Lbx_booking.ItemsSource = bookingcalender.SelectedDates;
         }
     }
 }

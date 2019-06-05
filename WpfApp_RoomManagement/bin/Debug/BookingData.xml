@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<ArrayOfBookings xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Bookings>
+    <booked_roomnr>0</booked_roomnr>
+    <email>alvares.anglita@gmail.com</email>
+    <from>2019-06-06T00:00:00</from>
+    <to>2019-06-11T00:00:00</to>
+  </Bookings>
+</ArrayOfBookings>

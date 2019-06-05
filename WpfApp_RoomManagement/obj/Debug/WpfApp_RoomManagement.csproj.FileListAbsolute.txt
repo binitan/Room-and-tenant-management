@@ -4,7 +4,6 @@ C:\Users\binita\Documents\ACADEMIC_DATA\WpfApp_RoomManagement\bin\Debug\WpfApp_R
 C:\Users\binita\Documents\ACADEMIC_DATA\WpfApp_RoomManagement\obj\Debug\BookRoom.g.cs
 C:\Users\binita\Documents\ACADEMIC_DATA\WpfApp_RoomManagement\obj\Debug\MainWindow.g.cs
 C:\Users\binita\Documents\ACADEMIC_DATA\WpfApp_RoomManagement\obj\Debug\App.g.cs
-C:\Users\binita\Documents\ACADEMIC_DATA\WpfApp_RoomManagement\obj\Debug\GeneratedInternalTypeHelper.g.cs
 C:\Users\binita\Documents\ACADEMIC_DATA\WpfApp_RoomManagement\obj\Debug\WpfApp_RoomManagement_MarkupCompile.cache
 C:\Users\binita\Documents\ACADEMIC_DATA\WpfApp_RoomManagement\obj\Debug\WpfApp_RoomManagement_MarkupCompile.lref
 C:\Users\binita\Documents\ACADEMIC_DATA\WpfApp_RoomManagement\obj\Debug\BookRoom.baml

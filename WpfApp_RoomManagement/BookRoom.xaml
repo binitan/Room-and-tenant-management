@@ -37,11 +37,19 @@
             </StackPanel>
             <StackPanel VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0,1,0,0" Orientation="Horizontal" Width="214">
                 <TextBlock Width="83" HorizontalAlignment="Left" Margin="0,1,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Text="Booking From"/>
-                <DatePicker HorizontalAlignment="Left" VerticalAlignment="Top" Width="121" />
+                <DatePicker x:Name="Tbx_from" HorizontalAlignment="Left" VerticalAlignment="Top" Width="118" />
             </StackPanel>
             <StackPanel VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0,1,0,0" Orientation="Horizontal" Width="214">
                 <TextBlock Width="83" HorizontalAlignment="Left" Margin="0,1,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Text="Booking Till"/>
-                <DatePicker HorizontalAlignment="Left" VerticalAlignment="Top" Width="122" />
+                <DatePicker x:Name="Tbx_to" HorizontalAlignment="Left" VerticalAlignment="Top" Width="119" />
+            </StackPanel>
+            <StackPanel VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0,1,0,0" Orientation="Horizontal" Width="214">
+                <TextBlock Width="83" HorizontalAlignment="Left" Margin="0,1,0,0" TextWrapping="Wrap" Text="RoomNr"  VerticalAlignment="Top"/>
+                <TextBox x:Name="Tbx_rnum" Height="23" TextWrapping="Wrap" TextChanged="Tenant_TextChanged" Width="120"/>
+            </StackPanel>
+            <StackPanel VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0,1,0,0" Orientation="Horizontal" Width="214">
+                <TextBlock Width="83" HorizontalAlignment="Left" Margin="0,1,0,0" TextWrapping="Wrap" Text="Total Price"  VerticalAlignment="Top"/>
+                <TextBox x:Name="Tbx_tp" Height="23" TextWrapping="Wrap" TextChanged="Tenant_TextChanged" Width="120"/>
             </StackPanel>
         </StackPanel>
         <StackPanel VerticalAlignment="Bottom" Margin="22,0,10,10" FlowDirection="RightToLeft" Orientation="Horizontal" Grid.Row="1" Height="22" Grid.Column="2">
