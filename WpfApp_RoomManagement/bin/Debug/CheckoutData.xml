@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<ArrayOfCheckoutList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <CheckoutList>
+    <checkoutDate>2019-06-11T00:00:00+02:00</checkoutDate>
+    <roomNumber>310</roomNumber>
+    <identityNr>SDRT76T</identityNr>
+    <name>Ana Lena Mohr</name>
+  </CheckoutList>
+  <CheckoutList>
+    <checkoutDate>2019-06-11T00:00:00+02:00</checkoutDate>
+    <roomNumber>208</roomNumber>
+    <identityNr>FIT87MQ</identityNr>
+    <name>Juliana Gabiano</name>
+  </CheckoutList>
+</ArrayOfCheckoutList>

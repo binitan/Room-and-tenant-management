@@ -1,27 +1,303 @@
 <?xml version="1.0"?>
 <ArrayOfRoom xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Room>
-    <roomnr>0</roomnr>
-    <availability>Free</availability>
-	<bookedby>Binita Nayak</bookedby>
-	<price>50</price>
-	<disability>Yes</disability>
-	<specialities>Balcony</specialities>
-	<smoke>Yes</smoke>
-	<housekeeping>Clean</housekeeping>
-	<furniture>1 Bed,1 Cupboard,1 Study Table</furniture>
+    <housekeeping_>true</housekeeping_>
+    <roomnr>101</roomnr>
+    <price>80</price>
+    <disability>Yes</disability>
+    <specialities>River-Side</specialities>
+    <smoke>No</smoke>
+    <furniture>1 Bed,1 Cupboard,1 Study Table</furniture>
+    <housekeeping>true</housekeeping>
   </Room>
   <Room>
-     <roomnr>1</roomnr>
-    <availability>Occupied</availability>
-	<bookedby>Asish Mishra</bookedby>
-	<price>60</price>
-	<disability>No</disability>
-	<specialities>River-Side</specialities>
-	<smoke>No</smoke>
-	<furniture>1 Bed,1 Cupboard,1 Study Table</furniture>
-    <housekeeping>Clean</housekeeping>
+    <housekeeping_>true</housekeeping_>
+    <roomnr>102</roomnr>
+    <price>80</price>
+    <disability>Yes</disability>
+    <specialities>River-Side</specialities>
+    <smoke>No</smoke>
+    <furniture>1 Bed,1 Cupboard,1 Study Table</furniture>
+    <housekeeping>true</housekeeping>
   </Room>
-  
- 
+  <Room>
+    <housekeeping_>true</housekeeping_>
+    <roomnr>103</roomnr>
+    <price>100</price>
+    <disability>Yes</disability>
+    <specialities>River-Side</specialities>
+    <smoke>No</smoke>
+    <furniture>1 Bed,1 Cupboard,1 Study Table</furniture>
+    <housekeeping>true</housekeeping>
+  </Room>
+  <Room>
+    <housekeeping_>true</housekeeping_>
+    <roomnr>104</roomnr>
+    <price>100</price>
+    <disability>Yes</disability>
+    <specialities>River-Side</specialities>
+    <smoke>Yes</smoke>
+    <furniture>1 Bed,1 Cupboard,1 Study Table</furniture>
+    <housekeeping>true</housekeeping>
+  </Room>
+  <Room>
+    <housekeeping_>true</housekeeping_>
+    <roomnr>105</roomnr>
+    <price>100</price>
+    <disability>Yes</disability>
+    <specialities>River-Side</specialities>
+    <smoke>Yes</smoke>
+    <furniture>1 Bed,1 Cupboard,1 Study Table</furniture>
+    <housekeeping>true</housekeeping>
+  </Room>
+  <Room>
+    <housekeeping_>true</housekeeping_>
+    <roomnr>106</roomnr>
+    <price>80</price>
+    <disability>Yes</disability>
+    <specialities>River-Side</specialities>
+    <smoke>No</smoke>
+    <furniture>1 Bed,1 Cupboard,1 Study Table</furniture>
+    <housekeeping>true</housekeeping>
+  </Room>
+  <Room>
+    <housekeeping_>true</housekeeping_>
+    <roomnr>107</roomnr>
+    <price>70</price>
+    <disability>Yes</disability>
+    <specialities>River-Side</specialities>
+    <smoke>No</smoke>
+    <furniture>1 Bed,1 Cupboard,1 Study Table</furniture>
+    <housekeeping>true</housekeeping>
+  </Room>
+  <Room>
+    <housekeeping_>true</housekeeping_>
+    <roomnr>108</roomnr>
+    <price>70</price>
+    <disability>Yes</disability>
+    <specialities>River-Side</specialities>
+    <smoke>Yes</smoke>
+    <furniture>1 Bed,1 Cupboard,1 Study Table</furniture>
+    <housekeeping>true</housekeeping>
+  </Room>
+  <Room>
+    <housekeeping_>true</housekeeping_>
+    <roomnr>109</roomnr>
+    <price>70</price>
+    <disability>Yes</disability>
+    <specialities>River-Side</specialities>
+    <smoke>Yes</smoke>
+    <furniture>1 Bed,1 Cupboard,1 Study Table</furniture>
+    <housekeeping>true</housekeeping>
+  </Room>
+  <Room>
+    <housekeeping_>true</housekeeping_>
+    <roomnr>110</roomnr>
+    <price>70</price>
+    <disability>Yes</disability>
+    <specialities>River-Side</specialities>
+    <smoke>Yes</smoke>
+    <furniture>1 Bed,1 Cupboard,1 Study Table</furniture>
+    <housekeeping>true</housekeeping>
+  </Room>
+  <Room>
+    <housekeeping_>true</housekeeping_>
+    <roomnr>201</roomnr>
+    <price>80</price>
+    <disability>No</disability>
+    <specialities>River-Side</specialities>
+    <smoke>No</smoke>
+    <furniture>1 Bed,1 Cupboard,1 Study Table</furniture>
+    <housekeeping>true</housekeeping>
+  </Room>
+  <Room>
+    <housekeeping_>true</housekeeping_>
+    <roomnr>202</roomnr>
+    <price>80</price>
+    <disability>No</disability>
+    <specialities>River-Side</specialities>
+    <smoke>No</smoke>
+    <furniture>1 Bed,1 Cupboard,1 Study Table</furniture>
+    <housekeeping>true</housekeeping>
+  </Room>
+  <Room>
+    <housekeeping_>true</housekeeping_>
+    <roomnr>203</roomnr>
+    <price>70</price>
+    <disability>No</disability>
+    <specialities>River-Side</specialities>
+    <smoke>No</smoke>
+    <furniture>1 Bed,1 Cupboard,1 Study Table</furniture>
+    <housekeeping>true</housekeeping>
+  </Room>
+  <Room>
+    <housekeeping_>true</housekeeping_>
+    <roomnr>204</roomnr>
+    <price>100</price>
+    <disability>Yes</disability>
+    <specialities>River-Side</specialities>
+    <smoke>Yes</smoke>
+    <furniture>1 Bed,1 Cupboard,1 Study Table</furniture>
+    <housekeeping>true</housekeeping>
+  </Room>
+  <Room>
+    <housekeeping_>true</housekeeping_>
+    <roomnr>205</roomnr>
+    <price>100</price>
+    <disability>Yes</disability>
+    <specialities>River-Side</specialities>
+    <smoke>Yes</smoke>
+    <furniture>1 Bed,1 Cupboard,1 Study Table</furniture>
+    <housekeeping>true</housekeeping>
+  </Room>
+  <Room>
+    <housekeeping_>true</housekeeping_>
+    <roomnr>206</roomnr>
+    <price>50</price>
+    <disability>No</disability>
+    <specialities>River-Side</specialities>
+    <smoke>No</smoke>
+    <furniture>1 Bed,1 Cupboard,1 Study Table</furniture>
+    <housekeeping>true</housekeeping>
+  </Room>
+  <Room>
+    <housekeeping_>true</housekeeping_>
+    <roomnr>207</roomnr>
+    <price>50</price>
+    <disability>No</disability>
+    <specialities>River-Side</specialities>
+    <smoke>No</smoke>
+    <furniture>1 Bed,1 Cupboard,1 Study Table</furniture>
+    <housekeeping>true</housekeeping>
+  </Room>
+  <Room>
+    <housekeeping_>true</housekeeping_>
+    <roomnr>208</roomnr>
+    <price>80</price>
+    <disability>No</disability>
+    <specialities>River-Side</specialities>
+    <smoke>Yes</smoke>
+    <furniture>1 Bed,1 Cupboard,1 Study Table</furniture>
+    <housekeeping>true</housekeeping>
+  </Room>
+  <Room>
+    <housekeeping_>true</housekeeping_>
+    <roomnr>209</roomnr>
+    <price>80</price>
+    <disability>No</disability>
+    <specialities>River-Side</specialities>
+    <smoke>Yes</smoke>
+    <furniture>1 Bed,1 Cupboard,1 Study Table</furniture>
+    <housekeeping>true</housekeeping>
+  </Room>
+  <Room>
+    <housekeeping_>true</housekeeping_>
+    <roomnr>210</roomnr>
+    <price>80</price>
+    <disability>No</disability>
+    <specialities>River-Side</specialities>
+    <smoke>Yes</smoke>
+    <furniture>1 Bed,1 Cupboard,1 Study Table</furniture>
+    <housekeeping>true</housekeeping>
+  </Room>
+  <Room>
+    <housekeeping_>false</housekeeping_>
+    <roomnr>301</roomnr>
+    <price>80</price>
+    <disability>Yes</disability>
+    <specialities>Balcony</specialities>
+    <smoke>Yes</smoke>
+    <furniture>1 Bed,1 Cupboard,1 Study Table</furniture>
+    <housekeeping>false</housekeeping>
+  </Room>
+  <Room>
+    <housekeeping_>true</housekeeping_>
+    <roomnr>302</roomnr>
+    <price>70</price>
+    <disability>No</disability>
+    <specialities>River-Side</specialities>
+    <smoke>No</smoke>
+    <furniture>1 Bed,1 Cupboard,1 Study Table</furniture>
+    <housekeeping>true</housekeeping>
+  </Room>
+  <Room>
+    <housekeeping_>true</housekeeping_>
+    <roomnr>303</roomnr>
+    <price>70</price>
+    <disability>No</disability>
+    <specialities>River-Side</specialities>
+    <smoke>No</smoke>
+    <furniture>1 Bed,1 Cupboard,1 Study Table</furniture>
+    <housekeeping>true</housekeeping>
+  </Room>
+  <Room>
+    <housekeeping_>true</housekeeping_>
+    <roomnr>304</roomnr>
+    <price>100</price>
+    <disability>Yes</disability>
+    <specialities>River-Side</specialities>
+    <smoke>Yes</smoke>
+    <furniture>1 Bed,1 Cupboard,1 Study Table</furniture>
+    <housekeeping>true</housekeeping>
+  </Room>
+  <Room>
+    <housekeeping_>true</housekeeping_>
+    <roomnr>305</roomnr>
+    <price>100</price>
+    <disability>Yes</disability>
+    <specialities>River-Side</specialities>
+    <smoke>Yes</smoke>
+    <furniture>1 Bed,1 Cupboard,1 Study Table</furniture>
+    <housekeeping>true</housekeeping>
+  </Room>
+  <Room>
+    <housekeeping_>true</housekeeping_>
+    <roomnr>306</roomnr>
+    <price>80</price>
+    <disability>No</disability>
+    <specialities>River-Side</specialities>
+    <smoke>No</smoke>
+    <furniture>1 Bed,1 Cupboard,1 Study Table</furniture>
+    <housekeeping>true</housekeeping>
+  </Room>
+  <Room>
+    <housekeeping_>true</housekeeping_>
+    <roomnr>307</roomnr>
+    <price>80</price>
+    <disability>No</disability>
+    <specialities>None</specialities>
+    <smoke>No</smoke>
+    <furniture>1 Bed,1 Cupboard,1 Study Table</furniture>
+    <housekeeping>true</housekeeping>
+  </Room>
+  <Room>
+    <housekeeping_>true</housekeeping_>
+    <roomnr>308</roomnr>
+    <price>50</price>
+    <disability>No</disability>
+    <specialities>None</specialities>
+    <smoke>Yes</smoke>
+    <furniture>1 Bed,1 Cupboard,1 Study Table</furniture>
+    <housekeeping>true</housekeeping>
+  </Room>
+  <Room>
+    <housekeeping_>true</housekeeping_>
+    <roomnr>309</roomnr>
+    <price>50</price>
+    <disability>No</disability>
+    <specialities>None</specialities>
+    <smoke>Yes</smoke>
+    <furniture>1 Bed,1 Cupboard,1 Study Table</furniture>
+    <housekeeping>true</housekeeping>
+  </Room>
+  <Room>
+    <housekeeping_>true</housekeeping_>
+    <roomnr>310</roomnr>
+    <price>50</price>
+    <disability>No</disability>
+    <specialities>None</specialities>
+    <smoke>Yes</smoke>
+    <furniture>1 Bed,1 Cupboard,1 Study Table</furniture>
+    <housekeeping>true</housekeeping>
+  </Room>
 </ArrayOfRoom>

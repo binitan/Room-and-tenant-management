@@ -39,9 +39,7 @@ namespace WpfApp_RoomManagement
             InitializeComponent();
             this.roomNo = selectedItem.roomnr;
             Tbx_rnum.Text = selectedItem.roomnr.ToString();
-
             this.price = selectedItem.price;
-           
         }
 
         private void Button_Click_Submit(object sender, RoutedEventArgs e)
@@ -55,20 +53,17 @@ namespace WpfApp_RoomManagement
             var email = Tbx_email.Text;
             var rnr = Tbx_rnum.Text;
             //var price = (((to - from).TotalDays) * (this.price));
-            //price = (double)Tbx_tp.Text;
+            //Tbx_tp.Text= price.ToString();
             if (storeData)
             {
+                Tbx_tp.Text = price.ToString();
                 Tenant newTene = new Tenant { firstname = fname, lastname = lname, dob = dob, email = email, identitynr = inr };
                 tenants.Add(newTene);
                 MainWindow.tt.Add(newTene);
-
-                MainWindow.bookings.Add(new Bookings { booked_roomnr = this.roomNo, email = email, from = from, to = to });
-
-
+                MainWindow.bookings.Add(new Bookings { booked_roomnr = this.roomNo, identitynr=inr, name = fname+" "+lname, from = from, to = to });
             }
-            //MyStorage.WriteXml<ObservableCollection<Tenant>>(tenants, "TenantData.xml");
 
-            MessageBox.Show("Booking Succesful", "Thank You", MessageBoxButton.OK, MessageBoxImage.Information);
+            MessageBox.Show("Booking Succesful !!", "Thank You", MessageBoxButton.OK, MessageBoxImage.Information);
 
         }
 
@@ -77,16 +72,11 @@ namespace WpfApp_RoomManagement
             Owner.Visibility = Visibility.Visible;
             MyStorage.WriteXml<ObservableCollection<Tenant>>(tenants, "TenantData.xml");
             MyStorage.WriteXml<ObservableCollection<Bookings>>(storebooking,"BookingData.xml");
-            //MainWindow.tt.Clear();
-            //MainWindow.tt = MyStorage.ReadXml<ObservableCollection<Tenant>>("TenantData.xml");
-
         }
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            //var tenant = new Tenant
-            //{ firstname = "enter firstname", lastname = "enter lasttname", dob = "dd/mm/yyyy", identitynr = "enter identity nr", email = "" };
-            //tenants.Add(tenant);
+            
             tenants = MyStorage.ReadXml<ObservableCollection<Tenant>>("TenantData.xml");
             storebooking = MyStorage.ReadXml<ObservableCollection<Bookings>>("BookingData.xml");
 
@@ -95,7 +85,19 @@ namespace WpfApp_RoomManagement
         private void Tenant_TextChanged(object sender, TextChangedEventArgs e)
         {
             storeData = true;
-            
+        }
+
+        private void Tenant_IdentityTextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
+        private void Tbx_BookingTo_SelectedDateChanged(object sender, SelectionChangedEventArgs e)
+        {
+            double totalDays = (Tbx_to.SelectedDate - Tbx_from.SelectedDate).Value.TotalDays;
+            double totalPrice = this.price * totalDays;
+            string tp = totalPrice.ToString();
+            tp = Tbx_tp.Text;
         }
     }
 }

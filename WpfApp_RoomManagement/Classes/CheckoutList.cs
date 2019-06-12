@@ -6,13 +6,11 @@ using System.Threading.Tasks;
 
 namespace WpfApp_RoomManagement.Classes
 {
-    public class Bookings
+    public class CheckoutList
     {
-        public int booked_roomnr { get; set; }
-        public string identitynr { get; set; }
+        public DateTime checkoutDate { get; set; }
+        public int roomNumber { get; set; }
+        public string identityNr { get; set; }
         public string name { get; set; }
-        public DateTime from { get; set; }
-        public DateTime to { get; set; }
-       
     }
 }
