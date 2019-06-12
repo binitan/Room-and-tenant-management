@@ -16,9 +16,7 @@ namespace WpfApp_RoomManagement.Classes
         public string smoke { get; set; }
         public string furniture { get; set; }
         public bool housekeeping_;
-
         public event PropertyChangedEventHandler PropertyChanged;
-
         public bool housekeeping
         {
             get
@@ -38,18 +36,5 @@ namespace WpfApp_RoomManagement.Classes
             if (handler != null)
                 handler(this, new PropertyChangedEventArgs(propertyName));
         }
-        //public string imagePath
-        //{
-        //    get
-        //    {
-        //        if (specialities.Equals("Balcony"))
-        //            imagePath = "Images\room1.jpg";
-        //        return this.imagePath;
-        //    }
-        //    set
-        //    {
-
-        //    }
-        //}
     }
 }

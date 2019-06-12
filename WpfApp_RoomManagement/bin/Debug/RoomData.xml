@@ -201,14 +201,14 @@
     <housekeeping>true</housekeeping>
   </Room>
   <Room>
-    <housekeeping_>false</housekeeping_>
+    <housekeeping_>true</housekeeping_>
     <roomnr>301</roomnr>
     <price>80</price>
     <disability>Yes</disability>
     <specialities>Balcony</specialities>
     <smoke>Yes</smoke>
     <furniture>1 Bed,1 Cupboard,1 Study Table</furniture>
-    <housekeeping>false</housekeeping>
+    <housekeeping>true</housekeeping>
   </Room>
   <Room>
     <housekeeping_>true</housekeeping_>

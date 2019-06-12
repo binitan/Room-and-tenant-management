@@ -9,237 +9,224 @@
         Closing="Window_Closing" 
         WindowStartupLocation="CenterScreen"
         Title="Rooms and Tenants Management" HorizontalAlignment="Left" Height="649.5" Width="645" Background="#FFF0D9BE">
-
-    <TabControl Margin="0,50,0,0" Background="{x:Null}" BorderBrush="{x:Null}">
-        <TabItem BorderBrush="Black" Header="Rooms" Margin="-2,-2,-2,0">
-            <TabItem.Background>
-                <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
-                    <GradientStop Color="#FFF0C490" Offset="0"/>
-                    <GradientStop Color="#FFF0C490" Offset="1"/>
-                </LinearGradientBrush>
-            </TabItem.Background>
-
-            <Grid Margin="0,0,0,0" Background="#FFF0C490" HorizontalAlignment="Left" Width="628">
-                <Grid.Resources>
-                    <local:Housekeeping x:Key="house"/>
-                </Grid.Resources>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="Auto" MinWidth="163"/>
-                    <ColumnDefinition Width="163*"/>
-                    <ColumnDefinition Width="302*"/>
-                    <!--<ColumnDefinition Width="99*"/>
-            <ColumnDefinition Width="175*"/>
-            <ColumnDefinition Width="318*"/>-->
-                </Grid.ColumnDefinitions>
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="Auto"/>
-                    <RowDefinition/>
-                    <!--<RowDefinition Height="83*"/>
-            <RowDefinition Height="486*"/>-->
-                </Grid.RowDefinitions>
-
-                <StackPanel DataContext="{Binding SelectedItem, ElementName=Lbx_rooms}" Grid.Column="2" Margin="10,11,0,37" Orientation="Vertical" Grid.Row="1">
-                    <TextBlock FontWeight="DemiBold" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Room Details:" VerticalAlignment="Top"/>
-                    <TextBlock  HorizontalAlignment="Left" Margin="0,1,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top"><Run Text="Room Number" Foreground="Black" /><Run Text=" "/><Run FontWeight="DemiBold" Text="{Binding roomnr}" Foreground="Black" /></TextBlock>
-                    <StackPanel VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0,1,0,0" Orientation="Horizontal" Width="282">
-                        <TextBlock  Width="118" HorizontalAlignment="Left" Margin="0,1,0,0" TextWrapping="Wrap"  VerticalAlignment="Top"><Run Text="Price"/><Run Text="(per day)"/></TextBlock>
-                        <TextBox IsEnabled="False" Text="{Binding price}" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="155"/>
+    <Grid HorizontalAlignment="Left" Height="615" Margin="0,3,0,0" Grid.RowSpan="2" VerticalAlignment="Top" Width="635" Grid.ColumnSpan="2">
+        <TabControl Margin="0,50,0,0" Background="{x:Null}" BorderBrush="{x:Null}">
+            <TabItem BorderBrush="Black" Header="Rooms" Margin="-2,-2,-2,0">
+                <TabItem.Background>
+                    <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                        <GradientStop Color="#FFF0C490" Offset="0"/>
+                        <GradientStop Color="#FFF0C490" Offset="1"/>
+                    </LinearGradientBrush>
+                </TabItem.Background>
+                <Grid Margin="0,0,0,0" Background="#FFF0C490" HorizontalAlignment="Left" Width="628">
+                    <Grid.Resources>
+                        <local:Housekeeping x:Key="house"/>
+                    </Grid.Resources>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" MinWidth="163"/>
+                        <ColumnDefinition Width="163*"/>
+                        <ColumnDefinition Width="302*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <StackPanel DataContext="{Binding SelectedItem, ElementName=Lbx_rooms}" Grid.Column="2" Margin="10,11,0,37" Orientation="Vertical" Grid.Row="1">
+                        <TextBlock FontWeight="DemiBold" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Room Details:" VerticalAlignment="Top"/>
+                        <TextBlock  HorizontalAlignment="Left" Margin="0,1,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top"><Run Text="Room Number" Foreground="Black" /><Run Text=" "/><Run FontWeight="DemiBold" Text="{Binding roomnr}" Foreground="Black" /></TextBlock>
+                        <StackPanel VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0,1,0,0" Orientation="Horizontal" Width="282">
+                            <TextBlock  Width="118" HorizontalAlignment="Left" Margin="0,1,0,0" TextWrapping="Wrap"  VerticalAlignment="Top"><Run Text="Price"/><Run Text="(per day)"/></TextBlock>
+                            <TextBox IsEnabled="False" Text="{Binding price}" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="155"/>
+                        </StackPanel>
+                        <StackPanel VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0,10,0,0" Orientation="Horizontal" Width="282">
+                            <TextBlock Width="118" HorizontalAlignment="Left" Margin="0,1,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Text="House-Keeping" Height="21"/>
+                            <Button Content="{Binding housekeeping, Converter={StaticResource house}}" HorizontalAlignment="Left" Height="23" VerticalAlignment="Top" Width="155" Click="Button_Click" HorizontalContentAlignment="Left"/>
+                        </StackPanel>
+                        <StackPanel VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0,10,0,0" Orientation="Horizontal" Width="282">
+                            <TextBlock Width="118" HorizontalAlignment="Left" Margin="0,1,0,0" TextWrapping="Wrap" Text="Disability-Friendly"  VerticalAlignment="Top" Height="21"/>
+                            <TextBox IsEnabled="False" Height="23" TextWrapping="Wrap" Text="{Binding disability}" Width="155"/>
+                        </StackPanel>
+                        <StackPanel VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0,10,0,0" Orientation="Horizontal" Width="282">
+                            <TextBlock Width="118" HorizontalAlignment="Left" Margin="0,1,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Text="Smoke-Friendly" Height="21"/>
+                            <TextBox IsEnabled="False" HorizontalAlignment="Left" Text="{Binding smoke}" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="155"/>
+                        </StackPanel>
+                        <StackPanel VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0,10,0,0" Orientation="Horizontal" Width="282">
+                            <TextBlock Width="118" HorizontalAlignment="Left" Margin="0,1,0,0" TextWrapping="Wrap" Text="Specialities"  VerticalAlignment="Top"/>
+                            <TextBox IsEnabled="False" Text="{Binding specialities}" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="155"/>
+                        </StackPanel>
+                        <StackPanel VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0,10,0,0" Orientation="Horizontal" Width="282">
+                            <TextBlock Width="118" HorizontalAlignment="Left" Margin="0,1,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Text="Furniture"/>
+                            <TextBox IsEnabled="False" Text="{Binding furniture}" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Width="155" />
+                        </StackPanel>
                     </StackPanel>
-                    <StackPanel VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0,10,0,0" Orientation="Horizontal" Width="282">
-                        <TextBlock Width="118" HorizontalAlignment="Left" Margin="0,1,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Text="House-Keeping" Height="21"/>
-                        <Button Content="{Binding housekeeping, Converter={StaticResource house}}" HorizontalAlignment="Left" Height="23" VerticalAlignment="Top" Width="155" Click="Button_Click" HorizontalContentAlignment="Left"/>
-
+                    <StackPanel VerticalAlignment="Bottom" Margin="18,0,18,230" FlowDirection="RightToLeft" Orientation="Horizontal" Grid.Row="1" Height="22" Grid.Column="2">
+                        <Button FontWeight="DemiBold" Content="Proceed to Book" Click="Button_Click_Book" HorizontalAlignment="Left" VerticalAlignment="Top"  Margin="5,0" Width="97" Background="#FFF09898"/>
                     </StackPanel>
-                    <StackPanel VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0,10,0,0" Orientation="Horizontal" Width="282">
-                        <TextBlock Width="118" HorizontalAlignment="Left" Margin="0,1,0,0" TextWrapping="Wrap" Text="Disability-Friendly"  VerticalAlignment="Top" Height="21"/>
-                        <TextBox IsEnabled="False" Height="23" TextWrapping="Wrap" Text="{Binding disability}" Width="155"/>
-                    </StackPanel>
-                    <StackPanel VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0,10,0,0" Orientation="Horizontal" Width="282">
-                        <TextBlock Width="118" HorizontalAlignment="Left" Margin="0,1,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Text="Smoke-Friendly" Height="21"/>
-                        <TextBox IsEnabled="False" HorizontalAlignment="Left" Text="{Binding smoke}" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="155"/>
-                    </StackPanel>
-                    <StackPanel VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0,10,0,0" Orientation="Horizontal" Width="282">
-                        <TextBlock Width="118" HorizontalAlignment="Left" Margin="0,1,0,0" TextWrapping="Wrap" Text="Specialities"  VerticalAlignment="Top"/>
-                        <TextBox IsEnabled="False" Text="{Binding specialities}" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="155"/>
-                    </StackPanel>
-                    <StackPanel VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0,10,0,0" Orientation="Horizontal" Width="282">
-                        <TextBlock Width="118" HorizontalAlignment="Left" Margin="0,1,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Text="Furniture"/>
-                        <TextBox IsEnabled="False" Text="{Binding furniture}" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Width="155" />
-                    </StackPanel>
-                    <!--<Image Source="{Binding imagePath}" Height="100"/>-->
-                </StackPanel>
-                <StackPanel VerticalAlignment="Bottom" Margin="18,0,18,230" FlowDirection="RightToLeft" Orientation="Horizontal" Grid.Row="1" Height="22" Grid.Column="2">
-                    <Button FontWeight="DemiBold" Content="Proceed to Book" Click="Button_Click_Book" HorizontalAlignment="Left" VerticalAlignment="Top"  Margin="5,0" Width="97" Background="#FFF09898"/>
-                </StackPanel>
-                <TextBlock FontWeight="DemiBold" HorizontalAlignment="Left" Margin="10,11,0,0" TextWrapping="Wrap" Text="List of Rooms:" VerticalAlignment="Top" Grid.Column="1" Grid.RowSpan="2" Height="16" Width="83"/>
-
-                <ListBox x:Name="Lbx_rooms" Background="#FFF0D9BE" Grid.Column="1" HorizontalAlignment="Left" Margin="10,27,0,10" Grid.Row="1" VerticalAlignment="Top" Width="151">
-                    <ListBox.ItemTemplate>
-                        <DataTemplate>
-                            <TextBlock><Run Text="Room Nr - "/><Run Text=" "/><Run Text="{Binding roomnr}" FontWeight="Bold"/></TextBlock>
-                        </DataTemplate>
-                    </ListBox.ItemTemplate>
-                </ListBox>
-                <TextBlock FontWeight="DemiBold" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Height="41" Width="155" Margin="2,11,0,0" Grid.RowSpan="2"><Run Text="Search "/><Run Text="by "/><Run Text="room:"/><InlineUIContainer>
+                    <TextBlock FontWeight="DemiBold" HorizontalAlignment="Left" Margin="10,11,0,0" TextWrapping="Wrap" Text="List of Rooms:" VerticalAlignment="Top" Grid.Column="1" Grid.RowSpan="2" Height="16" Width="83"/>
+                    <ListBox x:Name="Lbx_rooms" Background="#FFF0D9BE" Grid.Column="1" HorizontalAlignment="Left" Margin="10,27,0,15" Grid.Row="1" VerticalAlignment="Top" Width="151">
+                        <ListBox.ItemTemplate>
+                            <DataTemplate>
+                                <TextBlock><Run Text="Room Nr - "/><Run Text=" "/><Run Text="{Binding roomnr}" FontWeight="Bold"/></TextBlock>
+                            </DataTemplate>
+                        </ListBox.ItemTemplate>
+                    </ListBox>
+                    <TextBlock FontWeight="DemiBold" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Height="41" Width="155" Margin="2,11,0,0" Grid.RowSpan="2"><Run Text="Search "/><Run Text="by "/><Run Text="room:"/><InlineUIContainer>
                         <TextBox x:Name="Tbx_filter" HorizontalAlignment="Left" Height="23" 
                             ToolTip="Search by room" TextWrapping="Wrap" VerticalAlignment="Top" Width="152" TextChanged="Tbx_filter_TextChanged"/>
                     </InlineUIContainer></TextBlock>
-                <StackPanel Orientation="Vertical"  HorizontalAlignment="Left" Height="146" Margin="0,70,0,0" Grid.RowSpan="2" VerticalAlignment="Top" Width="161" Background="#FFF0D9BE">
-                    <TextBlock FontWeight="DemiBold" HorizontalAlignment="Left" Margin="1,1,0,0" TextWrapping="Wrap" Text="Search Free Rooms:" VerticalAlignment="Top"/>
-                    <TextBlock HorizontalAlignment="Left" Margin="1,1,0,0" TextWrapping="Wrap" Text="From:" VerticalAlignment="Top"/>
-                    <DatePicker 
+                    <StackPanel Orientation="Vertical"  HorizontalAlignment="Left" Height="120" Margin="0,70,0,0" Grid.RowSpan="2" VerticalAlignment="Top" Width="161" Background="#FFF0D9BE">
+                        <TextBlock FontWeight="DemiBold" HorizontalAlignment="Left" Margin="1,1,0,0" TextWrapping="Wrap" Text="Search Free Rooms:" VerticalAlignment="Top"/>
+                        <TextBlock HorizontalAlignment="Left" Margin="1,1,0,0" TextWrapping="Wrap" Text="From:" VerticalAlignment="Top"/>
+                        <DatePicker 
                        SelectedDateChanged="FromDatePicker_SelectedDateChanged" x:Name="fromDatePicker"  HorizontalAlignment="Left" VerticalAlignment="Top" Width="153">
-                        <DatePicker.Background>
-                            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                                <GradientStop Color="Black" Offset="0"/>
-                                <GradientStop Color="#FFF09898" Offset="1"/>
-                            </LinearGradientBrush>
-                        </DatePicker.Background>
-                    </DatePicker>
-                    <TextBlock HorizontalAlignment="Left" Margin="1,1,0,0" TextWrapping="Wrap" Text="Till:" VerticalAlignment="Top"/>
-                    <DatePicker SelectedDateChanged="ToDatePicker_SelectedDateChanged" x:Name="toDatePicker" HorizontalAlignment="Left" VerticalAlignment="Top" Width="153">
-                        <DatePicker.Background>
-                            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                                <GradientStop Color="Black" Offset="0"/>
-                                <GradientStop Color="#FFF09898" Offset="1"/>
-                            </LinearGradientBrush>
-                        </DatePicker.Background>
-                    </DatePicker>
-                    <StackPanel VerticalAlignment="Bottom" Margin="2,25,4,0" FlowDirection="RightToLeft" Orientation="Horizontal" Height="20">
-                        <Button FontWeight="DemiBold" Content="Go" Click="Button_Click_Go1" HorizontalAlignment="Left"  Margin="5,0" Width="60" Background="#FFF09898"/>
+                            <DatePicker.Background>
+                                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                    <GradientStop Color="Black" Offset="0"/>
+                                    <GradientStop Color="#FFF09898" Offset="1"/>
+                                </LinearGradientBrush>
+                            </DatePicker.Background>
+                        </DatePicker>
+                        <TextBlock HorizontalAlignment="Left" Margin="1,1,0,0" TextWrapping="Wrap" Text="Till:" VerticalAlignment="Top"/>
+                        <DatePicker SelectedDateChanged="ToDatePicker_SelectedDateChanged" x:Name="toDatePicker" HorizontalAlignment="Left" VerticalAlignment="Top" Width="153">
+                            <DatePicker.Background>
+                                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                    <GradientStop Color="Black" Offset="0"/>
+                                    <GradientStop Color="#FFF09898" Offset="1"/>
+                                </LinearGradientBrush>
+                            </DatePicker.Background>
+                        </DatePicker>
                     </StackPanel>
-                </StackPanel>
-                <StackPanel Background="#FFF0D9BE" x:Name="stackPanel" Orientation="Vertical" HorizontalAlignment="Left" Height="304" Margin="0,237,0,0" VerticalAlignment="Top" Width="161" RenderTransformOrigin="0.5,0.5" Grid.Row="1">
-                    <TextBlock FontWeight="DemiBold" HorizontalAlignment="Left" Margin="0,10,0,0" TextWrapping="Wrap" Text="Other Preferences:" VerticalAlignment="Top"/>
-                    <TextBlock HorizontalAlignment="Left" Margin="0,10,0,0" TextWrapping="Wrap" Text="Price(in EUR):" VerticalAlignment="Top"/>
-                    <ComboBox ToolTip="per day" Name="Cbx_price" Loaded="ComboBox_price" SelectionChanged="ComboBox_SelectionChanged2" HorizontalAlignment="Left" Margin="0,1,0,0" VerticalAlignment="Top" Width="153"/>
-                    <TextBlock HorizontalAlignment="Left" Margin="0,1,0,0" TextWrapping="Wrap" Text="Disability-Friendly:" VerticalAlignment="Top" />
-                    <ComboBox Name="Cbx_df" Loaded="ComboBox_df" SelectionChanged="ComboBox_SelectionChanged4" HorizontalAlignment="Left" Margin="0,1,0,0" VerticalAlignment="Top" Width="153"/>
-                    <TextBlock HorizontalAlignment="Left" Margin="0,1,0,0" TextWrapping="Wrap" Text="Specialities:" VerticalAlignment="Top" />
-                    <ComboBox Name="Cbx_sp" Loaded="ComboBox_sp" SelectionChanged="ComboBox_SelectionChanged5" HorizontalAlignment="Left" Margin="0,1,0,0" VerticalAlignment="Top" Width="153"/>
-                    <TextBlock HorizontalAlignment="Left" Margin="0,1,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="17" Width="151" ><Run Text="S"/><Run Text="moke-Friendly"/><Run Text=":"/></TextBlock>
-                    <ComboBox Name="Cbx_sf" Loaded="ComboBox_sf" SelectionChanged="ComboBox_SelectionChanged6" HorizontalAlignment="Left" Margin="0,1,0,0" VerticalAlignment="Top" Width="153"/>
-                    <StackPanel VerticalAlignment="Bottom"  FlowDirection="RightToLeft" Orientation="Vertical" Height="20" Margin="0,69,25,17" Grid.Row="1">
-                        <Button FontWeight="DemiBold"  Content="Clear" Click="Button_Click_Clear" HorizontalAlignment="Left" VerticalAlignment="Top"  Margin="-14,0,0,0" Width="60" Background="#FFF09898" RenderTransformOrigin="0.921,0.325"/>
+                    <StackPanel Background="#FFF0D9BE" x:Name="stackPanel" Orientation="Vertical" HorizontalAlignment="Left" Height="321" Margin="0,220,0,-4" VerticalAlignment="Top" Width="161" RenderTransformOrigin="0.5,0.5" Grid.Row="1">
+                        <TextBlock FontWeight="DemiBold" HorizontalAlignment="Left" Margin="0,10,0,0" TextWrapping="Wrap" Text="Other Preferences:" VerticalAlignment="Top"/>
+                        <TextBlock HorizontalAlignment="Left" Margin="0,10,0,0" TextWrapping="Wrap" Text="Price(in EUR):" VerticalAlignment="Top"/>
+                        <ComboBox Text="Select Price" IsEditable="True" IsReadOnly="True" ToolTip="per day" Name="Cbx_price" Loaded="ComboBox_price" SelectionChanged="ComboBox_SelectionChanged2" HorizontalAlignment="Left" Margin="0,1,0,0" VerticalAlignment="Top" Width="153"/>
+                        <TextBlock HorizontalAlignment="Left" Margin="0,1,0,0" TextWrapping="Wrap" Text="Disability-Friendly:" VerticalAlignment="Top" />
+                        <ComboBox Text="Select choice" IsEditable="True" IsReadOnly="True" Name="Cbx_df" Loaded="ComboBox_df" SelectionChanged="ComboBox_SelectionChanged4" HorizontalAlignment="Left" Margin="0,1,0,0" VerticalAlignment="Top" Width="153"/>
+                        <TextBlock HorizontalAlignment="Left" Margin="0,1,0,0" TextWrapping="Wrap" Text="Specialities:" VerticalAlignment="Top" />
+                        <ComboBox Text="Select choice" IsEditable="True" IsReadOnly="True" Name="Cbx_sp" Loaded="ComboBox_sp" SelectionChanged="ComboBox_SelectionChanged5" HorizontalAlignment="Left" Margin="0,1,0,0" VerticalAlignment="Top" Width="153"/>
+                        <TextBlock HorizontalAlignment="Left" Margin="0,1,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="17" Width="151" ><Run Text="S"/><Run Text="moke-Friendly"/><Run Text=":"/></TextBlock>
+                        <ComboBox Text="Select choice" IsEditable="True" IsReadOnly="True" Name="Cbx_sf" Loaded="ComboBox_sf" SelectionChanged="ComboBox_SelectionChanged6" HorizontalAlignment="Left" Margin="0,1,0,0" VerticalAlignment="Top" Width="153"/>
+                        <StackPanel VerticalAlignment="Bottom"  FlowDirection="RightToLeft" Orientation="Vertical" Height="20" Margin="0,69,25,17" Grid.Row="1">
+                            <Button FontWeight="DemiBold"  Content="Clear" Click="Button_Click_Clear" HorizontalAlignment="Left" VerticalAlignment="Top"  Margin="-14,0,0,0" Width="60" Background="#FFF09898" RenderTransformOrigin="0.921,0.325"/>
+                        </StackPanel>
                     </StackPanel>
-                </StackPanel>
-                <!--<Image Source="C:\Users\binita\Documents\ACADEMIC_DATA\WpfApp_RoomManagement\bin\Debug\Images\hostellogo-header.png"  Grid.Column="2" HorizontalAlignment="Left" Height="56" Margin="85,-66,0,0" VerticalAlignment="Top" Width="197"/>-->
-            </Grid>
-        </TabItem>
-        <TabItem BorderBrush="Black" Header="Tenants" Margin="-2,-2,-2,0">
-            <TabItem.Background>
-                <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
-                    <GradientStop Color="#FFF0C490" Offset="0"/>
-                    <GradientStop Color="#FFF0C490" Offset="1"/>
-                </LinearGradientBrush>
-            </TabItem.Background>
-            <Grid  Margin="0,0,0,0" Background="#FFF0C490" HorizontalAlignment="Left" Width="628">
-                <Grid.ColumnDefinitions>
-
-                    <ColumnDefinition Width="255*"/>
-                    <ColumnDefinition Width="349*"/>
-                    <!--<ColumnDefinition Width="99*"/>
-            <ColumnDefinition Width="175*"/>
-            <ColumnDefinition Width="318*"/>-->
-                </Grid.ColumnDefinitions>
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="Auto"/>
-                    <RowDefinition/>
-                    <!--<RowDefinition Height="83*"/>
-            <RowDefinition Height="486*"/>-->
-                </Grid.RowDefinitions>
-                <StackPanel DataContext="{Binding SelectedItem, ElementName=Lbx_tenants}" Grid.Column="1" Margin="10,11,0,323" Orientation="Vertical" Grid.Row="1">
-                    <TextBlock Width="95" HorizontalAlignment="Left" Margin="0,1,0,0" TextWrapping="Wrap" Text="Tenant Details" FontWeight="DemiBold" VerticalAlignment="Top"/>
-                    <StackPanel VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0,10,0,0" Orientation="Horizontal" Width="343">
-                        <TextBlock Width="95" HorizontalAlignment="Left" Margin="0,1,0,0" TextWrapping="Wrap" Text="First Name"  VerticalAlignment="Top"/>
-                        <TextBox  Height="23" TextWrapping="Wrap" Text="{Binding firstname}" Width="191" TextChanged="Tenant_Updated"/>
+                </Grid>
+            </TabItem>
+            <TabItem BorderBrush="Black" Header="Tenants" Margin="-2,-2,-2,0">
+                <TabItem.Background>
+                    <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                        <GradientStop Color="#FFF0C490" Offset="0"/>
+                        <GradientStop Color="#FFF0C490" Offset="1"/>
+                    </LinearGradientBrush>
+                </TabItem.Background>
+                <Grid  Margin="0,0,0,0" Background="#FFF0C490" HorizontalAlignment="Left" Width="628">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="255*"/>
+                        <ColumnDefinition Width="349*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <StackPanel DataContext="{Binding SelectedItem, ElementName=Lbx_tenants}" Grid.Column="1" Margin="10,11,0,323" Orientation="Vertical" Grid.Row="1">
+                        <TextBlock Width="95" HorizontalAlignment="Left" Margin="0,1,0,0" TextWrapping="Wrap" Text="Tenant Details" FontWeight="DemiBold" VerticalAlignment="Top"/>
+                        <StackPanel VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0,10,0,0" Orientation="Horizontal" Width="343">
+                            <TextBlock Width="95" HorizontalAlignment="Left" Margin="0,1,0,0" TextWrapping="Wrap" Text="First Name"  VerticalAlignment="Top"/>
+                            <TextBox  Height="23" TextWrapping="Wrap" Text="{Binding firstname}" Width="191" TextChanged="Tenant_Updated"/>
+                        </StackPanel>
+                        <StackPanel VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0,10,33,0" Orientation="Horizontal" Width="343">
+                            <TextBlock Width="95" HorizontalAlignment="Left" Margin="0,1,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Text="Last Name"/>
+                            <TextBox TextChanged="Tenant_Updated" HorizontalAlignment="Left" Text="{Binding lastname}" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="191"/>
+                        </StackPanel>
+                        <StackPanel VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0,10,33,0" Orientation="Horizontal" Width="343">
+                            <TextBlock Width="95" HorizontalAlignment="Left" Margin="0,1,0,0" TextWrapping="Wrap" Text="Identity Number"  VerticalAlignment="Top"/>
+                            <TextBox TextChanged="Tenant_Updated" Text="{Binding identitynr}" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="191"/>
+                        </StackPanel>
+                        <StackPanel VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0,10,33,0" Orientation="Horizontal" Width="343">
+                            <TextBlock Width="95" HorizontalAlignment="Left" Margin="0,1,0,0" TextWrapping="Wrap" Text="DOB"  VerticalAlignment="Top"/>
+                            <TextBox ToolTip="dd/mm/yyyy" TextChanged="Tenant_Updated" Text="{Binding dob}" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="191"/>
+                        </StackPanel>
+                        <StackPanel VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0,10,33,0" Orientation="Horizontal" Width="343">
+                            <TextBlock  Width="95" HorizontalAlignment="Left" Margin="0,1,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Text="Email"/>
+                            <TextBox TextChanged="Tenant_Updated" Text="{Binding email}"  HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="191"/>
+                        </StackPanel>
                     </StackPanel>
-                    <StackPanel VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0,10,33,0" Orientation="Horizontal" Width="343">
-                        <TextBlock Width="95" HorizontalAlignment="Left" Margin="0,1,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Text="Last Name"/>
-                        <TextBox TextChanged="Tenant_Updated" HorizontalAlignment="Left" Text="{Binding lastname}" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="191"/>
+                    <StackPanel VerticalAlignment="Bottom" Margin="12,0,62,298" FlowDirection="RightToLeft" Orientation="Horizontal" Grid.Row="1" Height="22" Grid.Column="1">
+                        <Button  Content="Update Details" Click="Button_Click_Update" FontWeight="DemiBold" HorizontalAlignment="Left" VerticalAlignment="Top"  Margin="5,0" Width="111" Background="#FFF09898"/>
                     </StackPanel>
-                    <StackPanel VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0,10,33,0" Orientation="Horizontal" Width="343">
-                        <TextBlock Width="95" HorizontalAlignment="Left" Margin="0,1,0,0" TextWrapping="Wrap" Text="Identity Number"  VerticalAlignment="Top"/>
-                        <TextBox TextChanged="Tenant_Updated" Text="{Binding identitynr}" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="191"/>
-                    </StackPanel>
-                    <StackPanel VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0,10,33,0" Orientation="Horizontal" Width="343">
-                        <TextBlock Width="95" HorizontalAlignment="Left" Margin="0,1,0,0" TextWrapping="Wrap" Text="DOB"  VerticalAlignment="Top"/>
-                        <TextBox ToolTip="dd/mm/yyyy" TextChanged="Tenant_Updated" Text="{Binding dob}" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="191"/>
-                    </StackPanel>
-                    <StackPanel VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0,10,33,0" Orientation="Horizontal" Width="343">
-                        <TextBlock  Width="95" HorizontalAlignment="Left" Margin="0,1,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Text="Email"/>
-                        <TextBox TextChanged="Tenant_Updated" Text="{Binding email}"  HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="191"/>
-                    </StackPanel>
-                </StackPanel>
-                <StackPanel VerticalAlignment="Bottom" Margin="12,0,62,298" FlowDirection="RightToLeft" Orientation="Horizontal" Grid.Row="1" Height="22" Grid.Column="1">
-                    <Button  Content="Update Details" Click="Button_Click_Update" FontWeight="DemiBold" HorizontalAlignment="Left" VerticalAlignment="Top"  Margin="5,0" Width="111" Background="#FFF09898"/>
-                </StackPanel>
-                <!--<DataGrid Name="Grd_tt" Grid.Column="1" HorizontalAlignment="Left" Height="149" Margin="10,11,0,0" Grid.Row="1" VerticalAlignment="Top" Width="194"/>-->
-
-                <ListBox x:Name="Lbx_tenants" HorizontalAlignment="Left" Background="#FFF0D9BE" Margin="4,57,0,0" Grid.Row="1" VerticalAlignment="Top" Width="237">
-                    <ListBox.ItemTemplate>
-                        <DataTemplate>
-                            <TextBlock><Run Text="{Binding firstname}"/><Run Text=" "/><Run Text="{Binding lastname}" FontWeight="Bold"/></TextBlock>
-                        </DataTemplate>
-                    </ListBox.ItemTemplate>
-                </ListBox>
-                <TextBlock FontWeight="DemiBold" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Height="41" Width="237" Margin="4,11,0,0" Grid.RowSpan="2"><Run Text="Search "/><Run Text="by "/><Run Text="lastname:"/><InlineUIContainer>
+                    <ListBox x:Name="Lbx_tenants" HorizontalAlignment="Left" Background="#FFF0D9BE" Margin="4,57,0,30" Grid.Row="1" VerticalAlignment="Top" Width="237">
+                        <ListBox.ItemTemplate>
+                            <DataTemplate>
+                                <TextBlock><Run Text="{Binding firstname}"/><Run Text=" "/><Run Text="{Binding lastname}" FontWeight="Bold"/></TextBlock>
+                            </DataTemplate>
+                        </ListBox.ItemTemplate>
+                    </ListBox>
+                    <TextBlock FontWeight="DemiBold" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Height="41" Width="237" Margin="4,11,0,0" Grid.RowSpan="2"><Run Text="Search "/><Run Text="by "/><Run Text="lastname:"/><InlineUIContainer>
                         <TextBox x:Name="Tbx_filter_tenant" HorizontalAlignment="Left" Height="23" 
                             ToolTip="Search by LastName" TextWrapping="Wrap" VerticalAlignment="Top" Width="236" TextChanged="Tbx_filter_tenants_TextChanged"/>
                     </InlineUIContainer></TextBlock>
-            </Grid>
+                </Grid>
+            </TabItem>
+            <TabItem BorderBrush="Black" Header="Bookings" Margin="-2,-2,-1,0">
+                <TabItem.Background>
+                    <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                        <GradientStop Color="#FFF0C490" Offset="0"/>
+                        <GradientStop Color="#FFF0C490" Offset="1"/>
+                    </LinearGradientBrush>
+                </TabItem.Background>
+                <Grid Margin="0,0,-3,0" Background="#FFF0C490" HorizontalAlignment="Left" Width="634">
 
-        </TabItem>
-        <TabItem BorderBrush="Black" Header="Bookings" Margin="-2,-2,-1,0">
-            <TabItem.Background>
-                <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
-                    <GradientStop Color="#FFF0C490" Offset="0"/>
-                    <GradientStop Color="#FFF0C490" Offset="1"/>
-                </LinearGradientBrush>
-            </TabItem.Background>
-            <Grid Margin="0,0,-3,0" Background="#FFF0C490" HorizontalAlignment="Left" Width="634">
-
-                <TextBlock FontWeight="DemiBold" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Height="41" Width="194" Margin="10,11,0,0"><Run Text="Search "/><Run Text="by "/><Run Text="IdentityNr:"/><InlineUIContainer>
+                    <TextBlock FontWeight="DemiBold" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Height="41" Width="194" Margin="10,11,0,0"><Run Text="Search "/><Run Text="by "/><Run Text="IdentityNr:"/><InlineUIContainer>
                         <TextBox x:Name="Tbx_filter_booking" HorizontalAlignment="Left" Height="26" 
                             ToolTip="Search by IdentityNr" TextWrapping="Wrap" VerticalAlignment="Top" Width="117" TextChanged="Tbx_filter_bookings_TextChanged"/>
                     </InlineUIContainer></TextBlock>
-                <StackPanel Width="615" Orientation="Vertical" Margin="6,57,6,85">
-                    <DataGrid Background="#FFF0D9BE" AutoGenerateColumns="False" x:Name="Grd_book" HorizontalAlignment="Left" VerticalAlignment="Top" Width="610" >
-                        <DataGrid.Columns>
-                            <DataGridTextColumn Header="Room Nu." Width="0.45*" Binding="{Binding booked_roomnr}"/>
-                            <DataGridTextColumn Header="ID Number" Width="0.6*" Binding="{Binding identitynr}"/>
-                            <DataGridTextColumn Header="Tenant Name" Width="1.2*" Binding="{Binding name}"/>
-                            <DataGridTextColumn Header="From(dd/mm/yyyy)" Width="*" Binding="{Binding from}"/>
-                            <DataGridTextColumn Header="To(dd/mm/yyyy)" Width="*" Binding="{Binding to}"/>
-                        </DataGrid.Columns>
-                    </DataGrid>
-                </StackPanel>
-                <Button x:Name="Btn_CheckOut" Content="Check Out" FontWeight="DemiBold" HorizontalAlignment="Left" Margin="476,479,0,0" VerticalAlignment="Top" Width="142"  Background="#FFF09898" Click="Btn_CheckOut_Click" Height="24"/>
-                <TextBlock FontWeight="DemiBold" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Height="41" Width="194" Margin="164,12,0,0"><Run Text="Search "/><Run Text="by "/><Run Text="RoomNr:"/><InlineUIContainer>
+                    <StackPanel Width="615" Orientation="Vertical" Margin="10,57,10,256">
+                        <DataGrid Background="#FFF0D9BE" AutoGenerateColumns="False" x:Name="Grd_book" HorizontalAlignment="Left" VerticalAlignment="Top" Width="605" MaxHeight="200" Height="210" >
+                            <DataGrid.Columns>
+                                <DataGridTextColumn Header="Room Nu." Width="0.45*" Binding="{Binding booked_roomnr}"/>
+                                <DataGridTextColumn Header="ID Number" Width="0.6*" Binding="{Binding identitynr}"/>
+                                <DataGridTextColumn Header="Tenant Name" Width="1.2*" Binding="{Binding name}"/>
+                                <DataGridTextColumn Header="From(dd/mm/yyyy)" Width="*" Binding="{Binding from}"/>
+                                <DataGridTextColumn Header="To(dd/mm/yyyy)" Width="*" Binding="{Binding to}"/>
+                            </DataGrid.Columns>
+                        </DataGrid>
+                    </StackPanel>
+                    <TextBlock FontWeight="DemiBold" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Height="41" Width="194" Margin="164,12,0,0"><Run Text="Search "/><Run Text="by "/><Run Text="RoomNr:"/><InlineUIContainer>
                         <TextBox x:Name="Tbx_filter_booking1" HorizontalAlignment="Left" Height="26" 
                             ToolTip="Search by RoomNr" TextWrapping="Wrap" VerticalAlignment="Top" Width="117" TextChanged="Tbx_filter_roomnr_TextChanged"/>
                     </InlineUIContainer></TextBlock>
-            </Grid>
-        </TabItem>
-        <TabItem BorderBrush="Black" Header="Checkout History" Margin="-2,-2,-1,0">
-            <TabItem.Background>
-                <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
-                    <GradientStop Color="#FFF0C490" Offset="0"/>
-                    <GradientStop Color="#FFF0C490" Offset="1"/>
-                </LinearGradientBrush>
-            </TabItem.Background>
-            <Grid Margin="0,0,-3,0" Background="#FFF0C490" HorizontalAlignment="Left" Width="634">
-                <DataGrid Background="#FFF0D9BE" AutoGenerateColumns="False" x:Name="Grd_history" HorizontalAlignment="Left" VerticalAlignment="Top" Width="610" >
-                    <DataGrid.Columns>
-                        <DataGridTextColumn Header="Room Nr" Width="0.45*" Binding="{Binding roomNumber}"/>
-                        <DataGridTextColumn Header="Tenant Name" Width="0.6*" Binding="{Binding name}"/>
-                        <DataGridTextColumn Header="IdentityNr" Width="1.2*" Binding="{Binding identityNr}"/>
-                        <DataGridTextColumn Header="Checkout Date(dd/mm/yyyy)" Width="*" Binding="{Binding checkoutDate}"/>
-                    </DataGrid.Columns>
-                </DataGrid>
-
-            </Grid>
-        </TabItem>
-
-    </TabControl>
+                    <Button x:Name="Btn_CheckOut" Content="Check Out" FontWeight="DemiBold" HorizontalAlignment="Left" VerticalAlignment="Top" Width="128"  Background="#FFF09898" Click="Btn_CheckOut_Click" Height="24" Margin="486,286,0,0"/>
+                </Grid>
+            </TabItem>
+            <TabItem BorderBrush="Black" Header="Checkout History" Margin="-2,-2,-1,0">
+                <TabItem.Background>
+                    <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                        <GradientStop Color="#FFF0C490" Offset="0"/>
+                        <GradientStop Color="#FFF0C490" Offset="1"/>
+                    </LinearGradientBrush>
+                </TabItem.Background>
+                <Grid Margin="0,0,-3,0" Background="#FFF0C490" HorizontalAlignment="Left" Width="634">
+                    <DataGrid IsReadOnly="True" Background="#FFF0D9BE" AutoGenerateColumns="False" x:Name="Grd_history" HorizontalAlignment="Left" VerticalAlignment="Top" Width="610"  Margin="4,44,0,0" >
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="Room Nr" Width="0.45*" Binding="{Binding roomNumber}"/>
+                            <DataGridTextColumn Header="Tenant Name" Width="0.6*" Binding="{Binding name}"/>
+                            <DataGridTextColumn Header="IdentityNr" Width="1.2*" Binding="{Binding identityNr}"/>
+                            <DataGridTextColumn Header="Checkout Date(dd/mm/yyyy)" Width="*" Binding="{Binding checkoutDate}"/>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                    <TextBlock HorizontalAlignment="Left" Margin="7,2,0,0" TextWrapping="Wrap" Text="From:" VerticalAlignment="Top"/>
+                    <DatePicker 
+                        SelectedDateChanged="Checkoutdate_selected" x:Name="checkoutDatePicker"  HorizontalAlignment="Left" VerticalAlignment="Top" Width="153" Margin="4,16,0,0">
+                        <DatePicker.Background>
+                            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                <GradientStop Color="Black" Offset="0"/>
+                                <GradientStop Color="#FFF09898" Offset="1"/>
+                            </LinearGradientBrush>
+                        </DatePicker.Background>
+                    </DatePicker>
+                </Grid>
+            </TabItem>
+        </TabControl>
+        <TextBlock FontSize="18" FontWeight="Bold" HorizontalAlignment="Left" Margin="5,10,0,0" TextWrapping="Wrap" Text="Rooms And Tenants Management" VerticalAlignment="Top" Height="35" Width="329"/>
+    </Grid>
 </Window>

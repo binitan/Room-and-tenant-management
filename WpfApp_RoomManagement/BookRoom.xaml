@@ -17,60 +17,64 @@
         <StackPanel Grid.Column="2" Margin="10,11,0,40" Orientation="Vertical" Grid.Row="1">
             <StackPanel VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0,1,0,0" Orientation="Horizontal" Width="358">
                 <TextBlock Width="83" HorizontalAlignment="Left" Margin="0,1,0,0" TextWrapping="Wrap" Text="RoomNr"  VerticalAlignment="Top"/>
-                <TextBox x:Name="Tbx_rnum" IsEnabled="False" Height="23" TextWrapping="Wrap" TextChanged="Tenant_TextChanged" Width="169"/>
+                <TextBox x:Name="Tbx_rnum" IsEnabled="False" Height="23" TextWrapping="Wrap" TextChanged="Tenant_TextChanged" Width="189"/>
+            </StackPanel>
+            <StackPanel VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0,1,0,0" Orientation="Horizontal" Width="358">
+                <TextBlock Width="83" HorizontalAlignment="Left" Margin="0,1,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Text="Booking From"/>
+                <!--<DatePicker x:Name="Tbx_from" HorizontalAlignment="Left" VerticalAlignment="Top" Width="189" >
+                    <DatePicker.Background>
+                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                            <GradientStop Color="Black" Offset="0"/>
+                            <GradientStop Color="#FFF09898" Offset="1"/>
+                        </LinearGradientBrush>
+                    </DatePicker.Background>
+                </DatePicker>-->
+                <TextBox x:Name="Tbx_fromDate" IsEnabled="False" Height="23" TextWrapping="Wrap" Width="189"/>
+
+            </StackPanel>
+            <StackPanel VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0,1,0,0" Orientation="Horizontal" Width="358">
+                <TextBlock Width="83" HorizontalAlignment="Left" Margin="0,1,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Text="Booking Till"/>
+                <!--<DatePicker x:Name="Tbx_to" HorizontalAlignment="Left" VerticalAlignment="Top" Width="189" SelectedDateChanged="Tbx_BookingTo_SelectedDateChanged">
+                    <DatePicker.Background>
+                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                            <GradientStop Color="Black" Offset="0"/>
+                            <GradientStop Color="#FFF09898" Offset="1"/>
+                        </LinearGradientBrush>
+                    </DatePicker.Background>
+                </DatePicker>-->
+                <TextBox x:Name="Tbx_toDate" IsEnabled="False" Height="23" TextWrapping="Wrap"  Width="189"/>
+
+            </StackPanel>
+            <StackPanel VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0,1,0,0" Orientation="Horizontal" Width="358">
+                <TextBlock Width="83" HorizontalAlignment="Left" Margin="0,1,0,0" TextWrapping="Wrap" Text="Total Price"  VerticalAlignment="Top"/>
+                <TextBox x:Name="Tbx_tp" IsEnabled="False" Height="23" TextWrapping="Wrap" TextChanged="Tenant_TextChanged" Width="189"/>
             </StackPanel>
             <StackPanel VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0,1,0,0" Orientation="Horizontal" Width="358">
                 <TextBlock Width="83" HorizontalAlignment="Left" Margin="0,1,0,0" TextWrapping="Wrap" Text="First Name"  VerticalAlignment="Top"/>
-                <TextBox x:Name="Tbx_fname" Height="23" TextWrapping="Wrap" Text="{Binding firstname}" TextChanged="Tenant_TextChanged" Width="169"/>
+                <TextBox x:Name="Tbx_fname" Height="23" TextWrapping="Wrap" Text="{Binding firstname}" TextChanged="Tenant_TextChanged" Width="189"/>
             </StackPanel>
             <StackPanel VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0,1,0,0" Orientation="Horizontal" Width="358">
                 <TextBlock Width="83" HorizontalAlignment="Left" Margin="0,1,0,0" TextWrapping="Wrap" Text="Last Name"  VerticalAlignment="Top"/>
-                <TextBox x:Name="Tbx_lname" Text="{Binding lastname}" TextChanged="Tenant_TextChanged" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="169"/>
+                <TextBox x:Name="Tbx_lname" Text="{Binding lastname}" TextChanged="Tenant_TextChanged" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="189"/>
             </StackPanel>
             <StackPanel VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0,1,0,0" Orientation="Horizontal" Width="358">
                 <TextBlock Width="83" HorizontalAlignment="Left" Margin="0,1,0,0" TextWrapping="Wrap" Text="Identity Nr"  VerticalAlignment="Top"/>
                 <StackPanel Orientation="Vertical" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0,1,33,0"  Width="119">
-                    <TextBox x:Name="Tbx_inr" Text="{Binding identitynr}" TextChanged="Tenant_IdentityTextChanged"  HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="169" Margin="0,0,-50,0"/>
+                    <TextBox x:Name="Tbx_inr" Text="{Binding identitynr}" TextChanged="Tenant_TextChanged"  HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="189" Margin="0,0,-70,0"/>
                 </StackPanel>
             </StackPanel>
 
             <StackPanel VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0,1,0,0" Orientation="Horizontal" Width="358">
                 <TextBlock Width="83" HorizontalAlignment="Left" Margin="0,1,0,0" TextWrapping="Wrap" Text="BirthDate"  VerticalAlignment="Top"/>
-                <TextBox x:Name="Tbx_dob" ToolTip="dd/mm/yyyy" Text="{Binding dob}" TextChanged="Tenant_TextChanged" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="170"/>
+                <TextBox x:Name="Tbx_dob" ToolTip="dd/mm/yyyy" Text="{Binding dob}" TextChanged="Tenant_TextChanged" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="189"/>
             </StackPanel>
             <StackPanel VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0,1,0,0" Orientation="Horizontal" Width="358">
                 <TextBlock Width="83" HorizontalAlignment="Left" Margin="0,1,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Text="Email"/>
-                <TextBox  x:Name="Tbx_email" Text="{Binding email}" TextChanged="Tenant_TextChanged" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="170"/>
-            </StackPanel>
-            <StackPanel VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0,1,0,0" Orientation="Horizontal" Width="358">
-                <TextBlock Width="83" HorizontalAlignment="Left" Margin="0,1,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Text="Booking From"/>
-                <DatePicker x:Name="Tbx_from" HorizontalAlignment="Left" VerticalAlignment="Top" Width="169" >
-                <DatePicker.Background>
-                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                        <GradientStop Color="Black" Offset="0"/>
-                        <GradientStop Color="#FFF09898" Offset="1"/>
-                    </LinearGradientBrush>
-                </DatePicker.Background>
-                </DatePicker>
-            </StackPanel>
-            <StackPanel VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0,1,0,0" Orientation="Horizontal" Width="358">
-                <TextBlock Width="83" HorizontalAlignment="Left" Margin="0,1,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Text="Booking Till"/>
-                <DatePicker x:Name="Tbx_to" HorizontalAlignment="Left" VerticalAlignment="Top" Width="169" SelectedDateChanged="Tbx_BookingTo_SelectedDateChanged">
-                <DatePicker.Background>
-                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                        <GradientStop Color="Black" Offset="0"/>
-                        <GradientStop Color="#FFF09898" Offset="1"/>
-                    </LinearGradientBrush>
-                </DatePicker.Background>
-                </DatePicker>
-            </StackPanel>
-            <StackPanel VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0,1,0,0" Orientation="Horizontal" Width="358">
-                <TextBlock Width="83" HorizontalAlignment="Left" Margin="0,1,0,0" TextWrapping="Wrap" Text="Total Price"  VerticalAlignment="Top"/>
-                <TextBox x:Name="Tbx_tp" Height="23" TextWrapping="Wrap" TextChanged="Tenant_TextChanged" Width="169"/>
+                <TextBox  x:Name="Tbx_email" Text="{Binding email}" TextChanged="Tenant_TextChanged" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="189"/>
             </StackPanel>
         </StackPanel>
         <StackPanel VerticalAlignment="Bottom" Margin="22,0,10,10" FlowDirection="RightToLeft" Orientation="Horizontal" Grid.Row="1" Height="22" Grid.Column="2">
-            <Button FontWeight="DemiBold" Content="Book" Click="Button_Click_Submit" HorizontalAlignment="Left"  Margin="5,0,5,2" Width="59" Background="#FFF09898"/>
+            <Button Name="Btn_book" FontWeight="DemiBold" Content="Book" Click="Button_Click_Submit" HorizontalAlignment="Left"  Margin="5,0,5,2" Width="59" Background="#FFF09898"/>
         </StackPanel>
         <TextBlock FontWeight="DemiBold" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Booking Details" VerticalAlignment="Top" Margin="10,18,0,0"/>
     </Grid>

@@ -7,4 +7,81 @@
     <from>2019-07-05T00:00:00</from>
     <to>2019-07-07T00:00:00</to>
   </Bookings>
+  <Bookings>
+    <booked_roomnr>201</booked_roomnr>
+    <identitynr>WRTG76R</identitynr>
+    <name>Adriana Hoffman</name>
+    <from>2019-06-14T00:00:00</from>
+    <to>2019-06-17T00:00:00</to>
+  </Bookings>
+  <Bookings>
+    <booked_roomnr>301</booked_roomnr>
+    <identitynr>RTZ67KL</identitynr>
+    <name>Brinley Spears</name>
+    <from>2019-06-14T00:00:00</from>
+    <to>2019-06-17T00:00:00</to>
+  </Bookings>
+  <Bookings>
+    <booked_roomnr>101</booked_roomnr>
+    <identitynr>LHJ26TV</identitynr>
+    <name>Satchel Geller</name>
+    <from>2019-06-14T00:00:00</from>
+    <to>2019-06-17T00:00:00</to>
+  </Bookings>
+  <Bookings>
+    <booked_roomnr>108</booked_roomnr>
+    <identitynr>BNV24R</identitynr>
+    <name>Countee Dsouza</name>
+    <from>2019-06-14T00:00:00</from>
+    <to>2019-06-21T00:00:00</to>
+  </Bookings>
+  <Bookings>
+    <booked_roomnr>208</booked_roomnr>
+    <identitynr>QTY94G</identitynr>
+    <name>Kastel Hemsworth</name>
+    <from>2019-06-14T00:00:00</from>
+    <to>2019-06-21T00:00:00</to>
+  </Bookings>
+  <Bookings>
+    <booked_roomnr>108</booked_roomnr>
+    <identitynr>P12345</identitynr>
+    <name>Nathan Benson</name>
+    <from>2019-06-11T00:00:00</from>
+    <to>2019-06-13T00:00:00</to>
+  </Bookings>
+  <Bookings>
+    <booked_roomnr>308</booked_roomnr>
+    <identitynr>SFT63TZ</identitynr>
+    <name>Siddalee Kentworth</name>
+    <from>2019-06-14T00:00:00</from>
+    <to>2019-06-21T00:00:00</to>
+  </Bookings>
+  <Bookings>
+    <booked_roomnr>302</booked_roomnr>
+    <identitynr>DFG34TH</identitynr>
+    <name>Natalie Portman</name>
+    <from>2019-06-14T00:00:00</from>
+    <to>2019-06-21T00:00:00</to>
+  </Bookings>
+  <Bookings>
+    <booked_roomnr>105</booked_roomnr>
+    <identitynr>KGH79ZU</identitynr>
+    <name>Scarlett Radcliffe</name>
+    <from>2019-06-14T00:00:00</from>
+    <to>2019-06-21T00:00:00</to>
+  </Bookings>
+  <Bookings>
+    <booked_roomnr>103</booked_roomnr>
+    <identitynr>SDZ12WD</identitynr>
+    <name>Daniel Watson</name>
+    <from>2019-06-14T00:00:00</from>
+    <to>2019-06-21T00:00:00</to>
+  </Bookings>
+  <Bookings>
+    <booked_roomnr>110</booked_roomnr>
+    <identitynr>DFTZH67</identitynr>
+    <name>William Kom</name>
+    <from>2019-06-14T00:00:00</from>
+    <to>2019-06-18T00:00:00</to>
+  </Bookings>
 </ArrayOfBookings>

@@ -12,4 +12,28 @@
     <identityNr>FIT87MQ</identityNr>
     <name>Juliana Gabiano</name>
   </CheckoutList>
+  <CheckoutList>
+    <checkoutDate>2019-06-09T00:00:00+02:00</checkoutDate>
+    <roomNumber>210</roomNumber>
+    <identityNr>LHJ26TV</identityNr>
+    <name>Satchel Geller</name>
+  </CheckoutList>
+  <CheckoutList>
+    <checkoutDate>2019-06-09T00:00:00+02:00</checkoutDate>
+    <roomNumber>306</roomNumber>
+    <identityNr>QTY94G</identityNr>
+    <name>Kastel Hemsworth</name>
+  </CheckoutList>
+  <CheckoutList>
+    <checkoutDate>2019-06-11T00:00:00+02:00</checkoutDate>
+    <roomNumber>308</roomNumber>
+    <identityNr>BHK65TH</identityNr>
+    <name>Andrew Gelder</name>
+  </CheckoutList>
+  <CheckoutList>
+    <checkoutDate>2019-06-11T00:00:00+02:00</checkoutDate>
+    <roomNumber>101</roomNumber>
+    <identityNr>FGZ09ZU</identityNr>
+    <name>Binita Nayak</name>
+  </CheckoutList>
 </ArrayOfCheckoutList>
